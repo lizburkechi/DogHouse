@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weight: 1
+  breed: MyString
+  renter: one
+
+two:
+  weight: 1
+  breed: MyString
+  renter: two

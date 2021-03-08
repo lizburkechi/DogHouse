@@ -1,0 +1,2 @@
+module RenterApartmentApplicationsHelper
+end
