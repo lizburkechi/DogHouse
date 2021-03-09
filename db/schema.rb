@@ -10,26 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_07_221225) do
+ActiveRecord::Schema.define(version: 2021_03_09_154746) do
 
   create_table "apartments", force: :cascade do |t|
     t.text "description"
     t.integer "price"
+    t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "dogs", force: :cascade do |t|
+    t.string "name"
     t.integer "weight"
     t.string "breed"
     t.integer "renter_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "bio"
     t.index ["renter_id"], name: "index_dogs_on_renter_id"
   end
 
   create_table "pet_policies", force: :cascade do |t|
-    t.integer "weight_restriction"
+    t.integer "weight_max"
     t.string "breed_restriction"
     t.integer "apartment_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -38,7 +41,6 @@ ActiveRecord::Schema.define(version: 2021_03_07_221225) do
   end
 
   create_table "renter_apartment_applications", force: :cascade do |t|
-    t.string "address"
     t.string "email"
     t.integer "renter_id", null: false
     t.integer "apartment_id", null: false
