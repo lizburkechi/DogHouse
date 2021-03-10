@@ -1,5 +1,9 @@
 class RentersController < ApplicationController
-
+    def index
+        
+    end
+    
+    
     def new
         @renter = Renter.new
     end
@@ -18,6 +22,16 @@ class RentersController < ApplicationController
         renter_params
     end
     
+    def show
+        @renter = Renter.find(params[:id])
+    end
+    
+    def destroy
+        renter = Renter.find(params[:id])
+        renter.destroy
+        redirect_to renters_path
+    end
+
     private
 
     def renter_params

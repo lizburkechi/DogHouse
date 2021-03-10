@@ -20,7 +20,7 @@ end
 10.times do
   PetPolicy.create(weight_max: (40..95).to_a.sample, breed_restriction: Faker::Creature::Dog.breed, apartment_id: Apartment.all.ids.sample)
 end
- 
+
 10.times do
   RenterApartmentApplication.create(email: Faker::Internet.email, renter_id: Renter.all.ids.sample, apartment_id: Apartment.all.ids.sample)
 end

@@ -1,0 +1,19 @@
+<center><h1> Your Dog Profile </h1>
+
+<main>
+
+<p>Name: <%= @dog.name %></p>
+<p>Weight: <%= @dog.weight %>lbs</p>
+<p>Breed: <%= @dog.breed %></p>
+<p>Pawrent: <%= @dog.renter.name %></p>
+<p>Bio: <%= @dog.bio %></p>
+
+</main>
+
+<nav>
+<%= link_to 'Back to Renter Profile', renter_path %>
+</nav>
+
+
+
+</center>
