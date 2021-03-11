@@ -1,0 +1,15 @@
+<center><h1> Update Your Information </h1>
+
+<main>
+
+<h1> Change Rent Allowance: </h1>
+
+<%= form_for @renter  do |form_helper|%>
+    <%= form_helper.label :rent_allowance %>
+    <%= form_helper.text_field :rent_allowance %><br/>
+    <br/>
+    <%= form_helper.submit "Done!" %>
+<% end %>
+
+</main>
+</center>
