@@ -1,8 +1,5 @@
 class RentersController < ApplicationController
-    def index
-        
-    end
-    
+   
     
     def new
         @renter = Renter.new
