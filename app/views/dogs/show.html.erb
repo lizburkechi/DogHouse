@@ -1,8 +1,14 @@
 <center><h1> Your Dog Profile </h1>
-
+<br>
+ <img class="fit-picture"
+    style="width: 30%"
+     src=https://images.pexels.com/photos/5256707/pexels-photo-5256707.jpeg?cs=srgb&dl=pexels-samson-katt-5256707.jpg&fm=jpg
+     alt="A pair of white dog paws hold open a book. A pair of glasses sit on top of the open pages"
+     align="center">
+<br>
 <main>
 
-<p>Name: <%= @dog.name %></p>
+<b><p>Name: <%= @dog.name %></p></b>
 <p>Weight: <%= @dog.weight %>lbs</p>
 <p>Breed: <%= @dog.breed %></p>
 <p>Pawrent: <%= @dog.renter.name %></p>

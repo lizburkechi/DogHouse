@@ -1,14 +1,20 @@
 <center>
-    <h1>This is THE Apartment</h1>
-
-    <p>Description: <%= @apartment.description %></p>
+    <h1>Apartment Information</h1>
     <br>
-    <p>Address: <%= @apartment.address %></p>
+    <img class="fit-picture"
+    style="width: 30%"
+     src=https://images.pexels.com/photos/2434202/pexels-photo-2434202.jpeg?cs=srgb&dl=pexels-bhargava-marripati-2434202.jpg&fm=jpg
+     alt="Downtown Chicago skyline at sunset with a pink and blue sky"
+     align="center">
+     <br>
+    <textarea rows="5" cols="60" wrap="hard">Description:<%= @apartment.description %></textarea>
+    <br>
+    <b><p>Address: <%= @apartment.address %></p></b>
     <br>
 
 
     <h2>Pet Policy</h2>
- <br>
+    <br>
     <p>Breed Restrictions:<%= @apartment.pet_policy.breed_restriction %></p>
     <br>
     <p>Maximum Weight:<%= @apartment.pet_policy.weight_max %></p>
