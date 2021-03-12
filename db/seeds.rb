@@ -5,7 +5,7 @@ Apartment.destroy_all
 RenterApartmentApplication.destroy_all
 
 10.times do
-  Renter.create(name: Faker::TvShows::Seinfeld.character, rent_allowance: (800..2000).to_a.sample)
+  Renter.create(name: Faker::TvShows::ParksAndRec.character, rent_allowance: (800..2000).to_a.sample)
 end
 
 Dog.create(name: Faker::Creature::Dog.name, bio: "This gentle dog is aloof toward his owner, but will eventually come when called. He always hides from strangers, and dislikes other animals.
@@ -82,4 +82,4 @@ RenterApartmentApplication.create(email: Faker::Internet.email, renter_id: 8, ap
 RenterApartmentApplication.create(email: Faker::Internet.email, renter_id: 9, apartment_id: 2)
 RenterApartmentApplication.create(email: Faker::Internet.email, renter_id: 10, apartment_id: 1)
 
-puts "Seeded"
+puts "Seeded!"

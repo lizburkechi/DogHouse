@@ -1,15 +1,29 @@
 <center><h1> Update Your Information </h1>
-
+<br>
 <main>
-
-<h1> Change Rent Allowance: </h1>
-
+<img class="fit-picture"
+    style= "width: 35%" 
+     src="https://images.pexels.com/photos/1181511/pexels-photo-1181511.jpeg?cs=srgb&dl=pexels-christina-morillo-1181511.jpg&fm=jpg"
+     alt="hands-typing-on-a-keyboard">
+<br>     
+<br>
 <%= form_for @renter  do |form_helper|%>
-    <%= form_helper.label :rent_allowance %>
-    <%= form_helper.text_field :rent_allowance %><br/>
-    <br/>
-    <%= form_helper.submit "Done!" %>
-<% end %>
 
+    <%= form_helper.label :name %>
+    <br>
+        <%= form_helper.text_field :name %>
+    <br>
+    <br>
+    <%= form_helper.label :rent_allowance %>
+    <br>
+    <%= form_helper.text_field :rent_allowance %>
+    <br>
+    <br>
+    <%= form_helper.submit "Submit Changes" %> 
+<% end %>
 </main>
+<br>
+<nav>
+<%= link_to 'Back to Renter Profile', renter_path(@renter), class: "btn btn-danger" %>
+</nav>
 </center>

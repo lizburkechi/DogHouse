@@ -1,16 +1,21 @@
 <center>
 
 <h1>Create a Renter Profile:</h1>
+<br>
+<img class="fit-picture"
+    style= "width: 35%" 
+     src="https://images.pexels.com/photos/2030037/pexels-photo-2030037.jpeg?cs=srgb&dl=pexels-naim-benjelloun-2030037.jpg&fm=jpg"
+     alt="hands-typing-on-a-keyboard">
+     <br>
 
-<p> We just need some starter information to set up your renter profile.<p>
+<i><b><p> We just need some starter information to set up your renter profile:<p></b></i>
 
 <main>
-
 <%= form_for @renter do |f| %>
-<p><%= f.label :name  %></p>
+<p><%= f.label :name  %>:</p>
 <p><%= f.text_field :name %></p>
 <br>
-<p><%= f.label :rent_allowance %></p>
+<p><%= f.label :rent_allowance %>:</p>
 <p><%= f.text_field :rent_allowance %></p>
 <br>
 <%= f.submit %>

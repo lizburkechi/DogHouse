@@ -1,7 +1,16 @@
-<h1>All Apartments</h1>
-
+<center><h1>Available Pet Friendly Apartments</h1>
+<main>
+<br>
 <ul>
   <% @apartments.each do |apartment| %>
-    <li> <%= link_to apartment.address, apartment %> </li>
+    <p> <%= link_to apartment.address, apartment %> </p>
   <% end %>
 </ul>
+
+</main>
+
+<br>
+<nav> 
+<%= link_to "Go Back", :back, class: "btn btn-danger" %>
+</nav>
+</center>

@@ -1,25 +1,28 @@
 <center><h1>Create Your Dog's Profile</h1>
 <main>
 
-<ul>
+<img class="fit-picture"
+    style="width: 15%"
+     src=https://images.pexels.com/photos/5122188/pexels-photo-5122188.jpeg?cs=srgb&dl=pexels-nataliya-vaitkevich-5122188.jpg&fm=jpg
+     alt="Corgi smiling in front of a laptop"
+     align="center">
+    
+
+<DIV align="center">
 <%= form_for @dog do |f| %>
 <p><%= f.label :name %></p>
 <p><%= f.text_field :name %></p>
-<br>
-<p><%= f.label :weight %></p>
+<p><%= f.label :weight %>: lbs</p>
 <p><%= f.text_field :weight %></p>
-<br>
 <p><%= f.label :breed %></p>
 <p><%= f.text_field :breed %></p>
-<br>
 <p><%= f.label :bio %></p>
 <p><%= f.text_field :bio %></p>
-<br>
 <p><%= f.label :renter_id %></p>
 <p><%= f.collection_select :renter_id, @renters, :id, :name %></p>
 <br>
 <%= f.submit %>
 <% end %>
-</ul>
+</DIV>
 </main>
 </center>

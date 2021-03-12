@@ -17,6 +17,7 @@ class RentersController < ApplicationController
     def update
         renter = Renter.find(params[:id])
         renter_params
+        redirect_to renter_path(renter)
     end
     
     def show
@@ -26,7 +27,7 @@ class RentersController < ApplicationController
     def destroy
         renter = Renter.find(params[:id])
         renter.destroy
-        redirect_to renters_path
+        redirect_to root_url
     end
 
     private

@@ -1,13 +1,23 @@
-  
-<h1>This is THE apartment</h1>
+<center>
+    <h1>This is THE Apartment</h1>
 
     <p>Description: <%= @apartment.description %></p>
+    <br>
     <p>Address: <%= @apartment.address %></p>
+    <br>
 
-<h2>Pet Policy</h2>
+
+    <h2>Pet Policy</h2>
+ <br>
+    <p>Breed Restrictions:<%= @apartment.pet_policy.breed_restriction %></p>
+    <br>
+    <p>Maximum Weight:<%= @apartment.pet_policy.weight_max %></p>
+    <br>
 
 
-    <p>Breed Restrictions: <%= @policy.breed_restriction %></p>
-    <p>Maximum Weight: <%= @policy.weight_max %></p>
+    <nav>
+    <p><%= link_to 'Back to Apartments', apartments_path, class: "btn btn-danger"%></p>
+    <%= link_to "Apply Now!", new_renter_apartment_application_path, class: "btn btn-danger" %> 
+    </nav>
 
-    <p><%= link_to 'Back to All Apartments', apartments_path %></p>
+</center>

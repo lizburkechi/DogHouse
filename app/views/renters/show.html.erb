@@ -1,22 +1,27 @@
-<center><h1> Your Renter Profile </h1>
-
+<center>
+<h1><%=@renter.name%>'s Profile </h1>
+<br>
 <main>
 
 <img class="fit-picture"
-    style= "width: 25%" 
-     src="https://images.pexels.com/photos/3111575/pexels-photo-3111575.jpeg?cs=srgb&dl=pexels-matthis-volquardsen-3111575.jpg&fm=jpg"
-     alt="Black lab sitting in front of dog house">
+    style= "width: 40%" 
+     src="https://images.pexels.com/photos/5256147/pexels-photo-5256147.jpeg?cs=srgb&dl=pexels-samson-katt-5256147.jpg&fm=jpg"
+     alt="woman-sitting-at-a-table-working-on-a-laptop-with-her-scruffy-tan-colored-dog-sitting-in-the-other-chair">
 
-<p>Name: <%= @renter.name %></p>
-<p>Rent Allowance: <%= @renter.rent_allowance %></p>
+<b><p>Name: <%= @renter.name %></p></b>
+<b><p>Rent Allowance: $<%= @renter.rent_allowance %></p></b>
 
 </main>
 
 <nav>
-<li> <%= link_to "Create Dog Profile", new_dog_path, class: "btn btn-danger" %> </li>
+<p> <%= link_to "Create Dog Profile", new_dog_path, class: "btn btn-danger" %> </p>
 <br>
-<li> <%= link_to "Update Renter Info", edit_renter_path, class: "btn btn-danger" %> </li>
-
+<p> <%= link_to "Update Renter Info", edit_renter_path, class: "btn btn-danger" %> </p>
+<br>
+<p> <%= link_to "See Apartment Listings", apartments_path, class: "btn btn-danger" %> </p>
+<br>
 </nav>
+
+<p><%= button_to "Delete Profile #{@renter.name}", @renter, :method => :delete, class: "btn btn-danger" %></p>
 
 </center>
